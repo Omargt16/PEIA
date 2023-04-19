@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Primera Evaluación</title>
+    <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/gradient-navbar.css">
+    <link rel="stylesheet" href="Assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md" id="app-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./Index.html">Primera Evaluación</a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item me-2">
+                        <a href="./Index.html" class="nav-link">&nbsp;Árboles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./estacionamiento.html" class="nav-link">&nbsp;Estacionamiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./documentacion.html" class="nav-link">&nbsp;Documentación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row" style="height: 88%;">
+        <div class="col-lg-3 col-xxl-3 ">
+            <div class="card form-card">
+                <div class="card-body">
+                    <h5 class="card-title">Arbol de busqueda</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ingrese la información del árbol a generar.</h6>
+                    <br>
+                    <form>
+                        <label for="amplitud">Amplitud:</label>
+                        <input class="form-control" id="amplitud" type="number" min="1">
+                        <label for="profundidad">Profundidad:</label>
+                        <input class="form-control" id="profundidad" type="number" min="1">
+                        <label for="n_nodos">Número total de nodos:</label>
+                        <input class="form-control" type="number" id="n_nodos" min="1" value="1"
+                            onchange="llenarCampoHijos()">
+                        <label for="nodos_h">Número de nodos hijos:</label>
+                        <input class="form-control" id="nodos_h" type="number" value="0" disabled>
+                        <label for="nodos_p">Número de nodos padres:</label>
+                        <input class="form-control" id="nodos_p" type="number" min="1">
+                        <br>
+                        <a class="btn btn-primary" onclick="ejecutar()">Generar Arbol</a>
+                        <a class="btn btn-primary" onclick="LimpiarCampos()">Limpiar</a>
+                    </form>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-muted">Elija la meta y el tipo de busqueda</h6>
+                    <form>
+                        <label for="meta">Meta:</label>
+                        <input class="form-control" id="meta" type="text">
+                        <label for="meta">Tipo de busqueda:</label>
+                        <select class="custom-select form-control my-1 mr-sm-2" id="busqueda">
+                            <option selected>....</option>
+                            <option value="1">Por amplitud</option>
+                            <option value="2">Por profundidad</option>
+                        </select>
+                        <br>
+                        <a class="btn btn-primary" onclick="buscar()">Buscar</a>
+
+                    </form>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-muted">El recorrido es:</h6>
+                    <p id="rec"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="container containerDibujo">
+                <canvas id="main-canvas">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="Js/arbol.js"></script>
+
+</html>

@@ -1,0 +1,84 @@
+
+.containerDibujo {
+    height: 100%;
+}
+
+.tituloPrincipal {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin: 0px;
+    font-size: x-large;
+}
+
+.encabezadoHerramienta {
+    color: white;
+    font-size: large;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+.iconButton {
+    width: 40px;
+    height: 20px;
+}
+
+.btnSimbolo {
+    padding-left: 10px;
+    background: linear-gradient(120deg, #00e4d0, #5983e8);
+    margin-left: 15%;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+}
+
+.colorInput {
+    margin-left: 15%;
+    border: none;
+    width: 55px;
+    margin-bottom: 10px;
+    color: #5983e8;
+}
+
+.inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -0.5;
+}
+
+.inputfile + label {
+    color: rgba(255,255,255,.75);
+    background-color: rgba(red, green, blue, 0);
+    display: flex;
+    padding-top: 8px;
+}
+
+
+canvas {
+    border: solid;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.oculto{
+    display: none;
+}
+
+.form-card{
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+}
+
+
+

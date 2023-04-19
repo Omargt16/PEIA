@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamiento</title>
+    <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/styles.css">
+    <link rel="stylesheet" href="Assets/css/gradient-navbar.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md" id="app-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./Index.html">Primera Evaluación</a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item me-2">
+                        <a href="./Index.html" class="nav-link">&nbsp;Árboles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./estacionamiento.html" class="nav-link">&nbsp;Estacionamiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./documentacion.html" class="nav-link">&nbsp;Documentación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <form id="f_inicial">
+                    <div class="mt-3 mb-2 form-outline">
+                        <div class="mt-5 ">
+                            <label class="form-label" for="no_pisos">Numero de pisos </label>
+                            <input class="form-control" type="number" name="no_pisos" id="no_pisos" min="1" required>
+                        </div>
+                        <div class="mt-3 mb-2 form-outline">
+                            <label class="form-label" for="no_cajones">Numero de cajones </label>
+                            <input class="form-control" type="number" name="no_cajones" id="no_cajones" min="1" max="12"
+                                required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="Submit" class="btn btn-success">Iniciar</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="d-grid gap-2">
+                    <button id="detener" class="btn btn-danger">Detener</button>
+                </div>
+                <div class="mt-2 mb-2 d-grid gap-2">
+                    <button id="estacionar" class="btn btn-primary">Estacionar</button>
+                </div>
+                <div class="mt-3 mb-3">
+                    <form id="f_auto">
+                        <div class="form-outline">
+                            <label for="no_auto form-label">Id de cajón </label>
+                            <input class="form-control" type="number" name="no_auto" id="no_auto" min="1" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" id="sacar_auto" class="mt-2 btn btn-secondary">Sacar
+                                auto</button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <p id="lug_disp"></p>
+                </div>
+            </div>
+            <div class="col mt-5">
+                <div id="estacionamiento">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Js/estacionamiento.js"></script>
+</body>
+
+</html>
